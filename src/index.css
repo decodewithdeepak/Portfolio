@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, #6366f1 1px, transparent 1px),
+      linear-gradient(to bottom, #6366f1 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}

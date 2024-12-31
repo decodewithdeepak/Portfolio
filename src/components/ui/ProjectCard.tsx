@@ -11,39 +11,46 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, image, link, tags }: ProjectCardProps) {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden group">
+    <div className="relative bg-white/80 dark:bg-gray-800/80 border border-blue-500 dark:border-white rounded-xl shadow-lg overflow-hidden group backdrop-blur-md">
+      {/* Gradient Hover Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300 pointer-events-none" />
+
+      {/* Image Section */}
       <div className="relative overflow-hidden">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+          {/* External Link */}
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition-colors"
+            className="p-3 bg-white/20 rounded-full hover:bg-white/40 transition-colors shadow-lg"
           >
             <ExternalLink className="w-6 h-6 text-white" />
           </a>
+          {/* GitHub Link */}
           <a
             href={`https://github.com/deepakmodi/${title.toLowerCase()}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition-colors"
+            className="p-3 bg-white/20 rounded-full hover:bg-white/40 transition-colors shadow-lg"
           >
             <Github className="w-6 h-6 text-white" />
           </a>
         </div>
       </div>
-      
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+
+      {/* Content Section */}
+      <div className="p-6 relative z-10">
+        <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{title}</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span 
+            <span
               key={tag}
               className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full"
             >

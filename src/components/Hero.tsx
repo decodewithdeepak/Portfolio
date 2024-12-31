@@ -20,9 +20,10 @@ export function Hero() {
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
       </div>
 
-      <div className="container mx-auto px-4 py-24 relative z-10">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-left space-y-6">
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          {/* Left Column */}
+          <div className="text-center space-y-6">
             <div className="space-y-2">
               <div className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
                 Hey! 👋 I'm
@@ -35,8 +36,7 @@ export function Hero() {
               </div>
             </div>
 
-
-            <div className="flex flex-col gap-2 mb-8">
+            <div className="flex flex-col items-center gap-2 mb-8">
               <a
                 href="tel:+918676842176"
                 className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:scale-105"
@@ -57,8 +57,7 @@ export function Hero() {
               </div>
             </div>
 
-
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <a
                 href="/resume.pdf"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all transform hover:scale-105 hover:shadow-lg"
@@ -73,10 +72,9 @@ export function Hero() {
                 <Mail className="w-5 h-5" />
                 Contact Me
               </Link>
-
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 justify-center">
               <a
                 href="https://github.com/deepakmodi"
                 target="_blank"
@@ -128,6 +126,7 @@ export function Hero() {
             </div>
           </div>
 
+          {/* Right Column - Profile Image */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse" />
             <img

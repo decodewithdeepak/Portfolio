@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Send } from 'lucide-react'; // Importing the Send icon
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -69,9 +70,10 @@ export function ContactForm() {
       
       <button
         type="submit"
-        className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+        className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center gap-2 transition-colors"
       >
-        Send Message
+        <span>Send Message</span>
+        <Send className="w-5 h-5" />
       </button>
     </form>
   );

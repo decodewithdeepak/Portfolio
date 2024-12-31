@@ -24,7 +24,9 @@ export function Hero() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-6">
             <div className="space-y-2">
-              <p className="text-blue-600 dark:text-blue-400 text-lg font-medium"> Hey! 👋 I'm </p>
+              <div className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
+                Hey! 👋 I'm
+              </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-fade-in">
                 Deepak Modi
               </h1>
@@ -33,22 +35,28 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a href="tel:+918676842176" 
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:scale-105">
+
+            <div className="flex flex-col gap-2 mb-8">
+              <a
+                href="tel:+918676842176"
+                className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:scale-105"
+              >
                 <Phone className="w-5 h-5" />
                 +91 8676842176
               </a>
-              <a href="mailto:contact@deepakmodi.dev" 
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:scale-105">
+              <a
+                href="mailto:contact@deepakmodi.dev"
+                className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:scale-105"
+              >
                 <Mail className="w-5 h-5" />
                 contact@deepakmodi.dev
               </a>
-              <span className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                 <MapPin className="w-5 h-5" />
                 Gurgaon, India
-              </span>
+              </div>
             </div>
+
 
             <div className="flex flex-wrap gap-4 mb-8">
               <a
@@ -60,10 +68,12 @@ export function Hero() {
               </a>
               <Link
                 href="#contact"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white transition-all transform hover:scale-105 hover:shadow-lg"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white dark:border-blue-600 dark:text-blue-400 dark:bg-transparent dark:hover:bg-blue-600 dark:hover:text-white transition-all transform hover:scale-105 hover:shadow-lg"
               >
+                <Mail className="w-5 h-5" />
                 Contact Me
               </Link>
+
             </div>
 
             <div className="flex gap-6">

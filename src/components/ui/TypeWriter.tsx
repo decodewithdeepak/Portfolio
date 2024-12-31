@@ -4,23 +4,23 @@ interface TypeWriterProps {
   words: string[];
   delay?: number;
   infinite?: boolean;
+  gradient?: boolean;
 }
 
-export function TypeWriter({ words, delay = 100, infinite = true }: TypeWriterProps) {
+export function TypeWriter({ words, delay = 100, infinite = true, gradient = true }: TypeWriterProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const word = words[currentWordIndex];
-    
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         // Typing
         if (currentText.length < word.length) {
           setCurrentText(word.slice(0, currentText.length + 1));
         } else {
-          // Start deleting after a pause
+          // Pause before deleting
           setTimeout(() => setIsDeleting(true), 1500);
         }
       } else {
@@ -29,7 +29,7 @@ export function TypeWriter({ words, delay = 100, infinite = true }: TypeWriterPr
           setCurrentText(word.slice(0, currentText.length - 1));
         } else {
           setIsDeleting(false);
-          setCurrentWordIndex((prev) => 
+          setCurrentWordIndex((prev) =>
             infinite ? (prev + 1) % words.length : Math.min(prev + 1, words.length - 1)
           );
         }
@@ -40,9 +40,9 @@ export function TypeWriter({ words, delay = 100, infinite = true }: TypeWriterPr
   }, [currentText, isDeleting, currentWordIndex, words, delay, infinite]);
 
   return (
-    <span className="text-blue-600 dark:text-blue-400">
-      {currentText}
-      <span className="animate-pulse">|</span>
+    <span className={`relative font-semibold ${gradient ? 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent' : 'text-blue-600 dark:text-blue-400'}`}>
+      <span className="whitespace-nowrap">{currentText}</span>
+      <span className="absolute inline-block w-1 bg-current animate-blink h-[1em] ml-1"></span>
     </span>
   );
 }

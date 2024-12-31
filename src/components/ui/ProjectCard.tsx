@@ -28,18 +28,18 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-white/20 rounded-full hover:bg-white/40 transition-colors shadow-lg"
+            className="p-3 bg-white/20 rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300 ease-in-out shadow-lg"
           >
-            <ExternalLink className="w-6 h-6 text-white" />
+            <ExternalLink className="w-6 h-6 text-white hover:text-white transition-colors" />
           </a>
           {/* GitHub Link */}
           <a
             href={`https://github.com/deepakmodi/${title.toLowerCase()}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-white/20 rounded-full hover:bg-white/40 transition-colors shadow-lg"
+            className="p-3 bg-white/20 rounded-full hover:bg-gray-900 hover:scale-110 transition-all duration-300 ease-in-out shadow-lg"
           >
-            <Github className="w-6 h-6 text-white" />
+            <Github className="w-6 h-6 text-white hover:text-white transition-colors" />
           </a>
         </div>
       </div>

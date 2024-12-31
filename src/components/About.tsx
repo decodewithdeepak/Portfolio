@@ -5,7 +5,7 @@ import { SectionTitle } from './ui/SectionTitle';
 export function About() {
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <SectionTitle>About Me</SectionTitle>
         
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">

@@ -26,7 +26,7 @@ const education = [
 export function Education() {
   return (
     <section id="education" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <SectionTitle>Education</SectionTitle>
         <div className="max-w-4xl mx-auto space-y-6">
           {education.map((edu) => (

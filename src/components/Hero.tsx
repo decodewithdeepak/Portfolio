@@ -16,7 +16,10 @@ export function Hero() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Animated background with particles */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
@@ -27,7 +30,6 @@ export function Hero() {
 
       <div className="container mx-auto px-8 py-8 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
           {/* Left Column - Content */}
           <div className="flex flex-col items-center justify-center text-center space-y-4 order-2 md:order-1">
             <div className="space-y-2">
@@ -49,6 +51,12 @@ export function Hero() {
 
           {/* Right Column - Profile Image */}
           <div className="relative order-1 md:order-2">
+            {/* Floating circular elements */}
+            <div className="absolute w-24 h-24 rounded-full border-4 border-blue-400 top-0 left-0 animate-floating" />
+            <div className="absolute w-24 h-24 rounded-full border-4 border-purple-400 bottom-0 right-0 animate-floating" />
+            <div className="absolute w-16 h-16 rounded-full border-2 border-blue-600 top-12 right-12 animate-floating" />
+            <div className="absolute w-16 h-16 rounded-full border-2 border-purple-600 bottom-12 left-12 animate-floating" />
+
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
               src="https://deepakmodi.netlify.app/assets/main.png"
@@ -60,7 +68,10 @@ export function Hero() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-[-4rem] left-1/2 -translate-x-1/2 animate-bounce">
-          <Link href="#about" className="p-2 rounded-full bg-white/10 dark:bg-gray-800/10  hover:bg-white/20 dark:hover:bg-gray-800/20 transition-colors">
+          <Link
+            href="#about"
+            className="p-2 rounded-full bg-white/10 dark:bg-gray-800/10 hover:bg-white/20 dark:hover:bg-gray-800/20 transition-colors"
+          >
             <ArrowDown className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </Link>
         </div>

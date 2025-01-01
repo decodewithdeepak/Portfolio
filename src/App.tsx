@@ -8,6 +8,7 @@ import { Experience } from './components/Experience';
 import { Certifications } from './components/Certifications';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
       <Certifications />
       <Education />
       <Contact />
+      <Footer />
     </div>
   );
 }
-
 export default App;

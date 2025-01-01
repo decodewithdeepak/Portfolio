@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun, FileText } from 'lucide-react';
 import { Link } from './Link';
+import { useTheme } from '../hooks/useTheme';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('#home'); // Track active link
+  const { isDark, setIsDark } = useTheme(); // Using custom hook for theme management
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +19,6 @@ export function Navbar() {
 
   const toggleTheme = () => {
     setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
   };
 
   const navLinks = [
@@ -33,9 +33,11 @@ export function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -54,7 +56,7 @@ export function Navbar() {
                 className={`text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-105 hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400 ${
                   activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''
                 }`}
-                onClick={() => setActiveLink(link.href)} // Set active link on click
+                onClick={() => setActiveLink(link.href)}
               >
                 {link.label}
               </Link>

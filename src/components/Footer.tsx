@@ -55,7 +55,7 @@ export function Footer() {
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>© {currentYear} Deepak Modi. All rights reserved.</p>
             <p className="flex items-center justify-center gap-1">
-              Made with <span className="text-red-500 animate-pulse">❤️</span> by Deepak Modi
+              Made with <span className="text-red-500 animate-pulse">❤️</span> in India
             </p>
           </div>
         </div>

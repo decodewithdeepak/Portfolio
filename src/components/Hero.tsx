@@ -51,19 +51,20 @@ export function Hero() {
 
           {/* Right Column - Profile Image */}
           <div className="relative order-1 md:order-2">
-            {/* Floating circular elements */}
-            <div className="absolute w-24 h-24 rounded-full border-4 border-blue-400 top-0 left-0 animate-floating" />
-            <div className="absolute w-24 h-24 rounded-full border-4 border-purple-400 bottom-0 right-0 animate-floating" />
-            <div className="absolute w-16 h-16 rounded-full border-2 border-blue-600 top-12 right-12 animate-floating" />
-            <div className="absolute w-16 h-16 rounded-full border-2 border-purple-600 bottom-12 left-12 animate-floating" />
+            {/* Floating solid circular elements */}
+            <div className="absolute w-24 h-24 bg-blue-600 top-0 left-0 rounded-full animate-floating" />
+            <div className="absolute w-24 h-24 bg-purple-600 bottom-0 right-0 rounded-full animate-floating delay-150" />
+            <div className="absolute w-20 h-20 bg-green-500 top-4 right-4 rounded-full animate-floating delay-300" />
+            <div className="absolute w-20 h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-              src="https://deepakmodi.netlify.app/assets/main.png"
+              src="/assets/profile.jpg"
               alt="Deepak Modi"
               className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
+
         </div>
 
         {/* Scroll Indicator */}

@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, image, link, tags }: ProjectCardProps) {
   return (
-    <div className="relative bg-white/80 dark:bg-gray-800/80 border border-blue-500 dark:border-white rounded-xl shadow-lg overflow-hidden group backdrop-blur-md">
+    <div className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-xl shadow-xl overflow-hidden group backdrop-blur-md">
       {/* Gradient Hover Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300 pointer-events-none" />
 
@@ -52,7 +52,7 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
           {tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full"
+              className="px-4 py-1 text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full shadow-sm transition-transform duration-300 hover:scale-105"
             >
               {tag}
             </span>

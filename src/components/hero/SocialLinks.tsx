@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 interface SocialLinkProps {
@@ -32,7 +32,6 @@ export function SocialLinks() {
     { href: 'https://instagram.com/deepakmodi', icon: <Instagram className="w-6 h-6" />, label: 'Instagram' },
     { href: 'https://twitter.com/deepakmodi', icon: <Twitter className="w-6 h-6" />, label: 'Twitter' },
     { href: 'https://wa.me/918676842176', icon: <FaWhatsapp className="w-6 h-6" />, label: 'WhatsApp' },
-    { href: 'https://youtube.com/deepakmodi', icon: <Youtube className="w-6 h-6" />, label: 'YouTube' },
   ];
 
   return (

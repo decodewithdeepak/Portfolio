@@ -121,3 +121,8 @@
     transform: rotateX(90deg);
   }
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

@@ -10,23 +10,6 @@
   body {
     @apply antialiased;
   }
-
-  /* Theme transition */
-  :root {
-    --theme-transition-duration: 0.5s;
-  }
-
-  html.dark {
-    color-scheme: dark;
-  }
-
-  html {
-    transition: background-color var(--theme-transition-duration) ease;
-  }
-
-  body * {
-    @apply transition-colors duration-500;
-  }
 }
 
 @layer utilities {
@@ -79,37 +62,6 @@
 
   .animate-floating {
     animation: floating 4s ease-in-out infinite;
-  }
-
-  /* Theme toggle animations */
-  @keyframes rotate-in {
-    from {
-      transform: rotate(-180deg) scale(0.5);
-      opacity: 0;
-    }
-    to {
-      transform: rotate(0) scale(1);
-      opacity: 1;
-    }
-  }
-
-  @keyframes rotate-out {
-    from {
-      transform: rotate(0) scale(1);
-      opacity: 1;
-    }
-    to {
-      transform: rotate(180deg) scale(0.5);
-      opacity: 0;
-    }
-  }
-
-  .rotate-in {
-    animation: rotate-in 0.5s ease-out forwards;
-  }
-
-  .rotate-out {
-    animation: rotate-out 0.5s ease-out forwards;
   }
 
   /* Scroll Reveal Animations */

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText } from 'lucide-react';
+import { Menu, X, Moon, Sun, FileText } from 'lucide-react';
 import { Link } from './Link';
 import { useTheme } from '../hooks/useTheme';
-import { ThemeToggle } from './ui/ThemeToggle';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#home');
-  const { isDark, setIsDark } = useTheme();
+  const [activeLink, setActiveLink] = useState('#home'); // Track active link
+  const { isDark, setIsDark } = useTheme(); // Using custom hook for theme management
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +65,13 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <a
               href="/resume.pdf"
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
@@ -78,7 +83,13 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center space-x-2">
-            <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -103,7 +114,7 @@ export function Navbar() {
                 }`}
                 onClick={() => {
                   setActiveLink(link.href);
-                  setIsOpen(false);
+                  setIsOpen(false); // Close the mobile menu on link click
                 }}
               >
                 {link.label}

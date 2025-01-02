@@ -126,26 +126,3 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
-
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    /* Avoid lag by making transitions on background-color smooth */
-    transition: background-color 0.5s ease, color 0.5s ease;
-  }
-
-  /* Smooth transition for text and background when switching themes */
-  body, html {
-    transition: background-color 0.5s ease, color 0.5s ease;
-  }
-  
-  /* Theme Transition */
-  html.dark {
-    color-scheme: dark;
-  }
-
-  body * {
-    @apply transition-colors duration-500;
-  }
-}

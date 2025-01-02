@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { ProjectCard } from './ui/ProjectCard';
+import { ScrollReveal } from './ui/ScrollReveal';
 
 const projects = [
   {
@@ -30,11 +31,19 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-8">
-        <SectionTitle>Projects</SectionTitle>
+        <ScrollReveal>
+          <SectionTitle>Projects</SectionTitle>
+        </ScrollReveal>
         
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projects.map((project, index) => (
+            <ScrollReveal 
+              key={project.title} 
+              animation="fade-up" 
+              delay={100 * (index + 1)}
+            >
+              <ProjectCard {...project} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

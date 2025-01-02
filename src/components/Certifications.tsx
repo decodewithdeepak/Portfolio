@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { CertificationCard } from './ui/CertificationCard';
+import { ScrollReveal } from './ui/ScrollReveal';
 
 const certifications = [
   {
@@ -30,10 +31,18 @@ export function Certifications() {
   return (
     <section id="certifications" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-8">
-        <SectionTitle>Certifications</SectionTitle>
+        <ScrollReveal>
+          <SectionTitle>Certifications</SectionTitle>
+        </ScrollReveal>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((cert) => (
-            <CertificationCard key={cert.title} {...cert} />
+          {certifications.map((cert, index) => (
+            <ScrollReveal 
+              key={cert.title} 
+              animation="zoom" 
+              delay={100 * (index + 1)}
+            >
+              <CertificationCard {...cert} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

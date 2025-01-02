@@ -11,6 +11,7 @@ export function Hero() {
     "Full-Stack Developer",
     "DSA Enthusiast",
     "Problem Solver",
+    "Content Creator",
     "Tech Innovator",
     "Lifelong Learner",
   ];

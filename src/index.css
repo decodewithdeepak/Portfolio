@@ -50,17 +50,26 @@
     background-size: 200% auto;
     animation: gradient 8s linear infinite;
   }
-}
 
-@keyframes floating {
-  0%, 100% {
-    transform: translateY(0);
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
-.animate-floating {
-  animation: floating 4s ease-in-out infinite;
+  .animate-floating {
+    animation: floating 4s ease-in-out infinite;
+  }
+
+  /* Scroll Reveal Animations */
+  .animate-in {
+    @apply opacity-100 translate-y-0 translate-x-0 scale-100 rotate-0;
+  }
+
+  .rotateX-90 {
+    transform: rotateX(90deg);
+  }
 }

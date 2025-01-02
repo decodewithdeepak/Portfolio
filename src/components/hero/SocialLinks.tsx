@@ -27,10 +27,10 @@ function SocialLink({ href, icon, label }: SocialLinkProps) {
 
 export function SocialLinks() {
   const links = [
-    { href: 'https://github.com/deepakmodi', icon: <Github className="w-6 h-6" />, label: 'GitHub' },
-    { href: 'https://linkedin.com/in/deepakmodi', icon: <Linkedin className="w-6 h-6" />, label: 'LinkedIn' },
-    { href: 'https://instagram.com/deepakmodi', icon: <Instagram className="w-6 h-6" />, label: 'Instagram' },
-    { href: 'https://twitter.com/deepakmodi', icon: <Twitter className="w-6 h-6" />, label: 'Twitter' },
+    { href: 'https://github.com/decodewithdeepak', icon: <Github className="w-6 h-6" />, label: 'GitHub' },
+    { href: 'https://linkedin.com/in/deepakmodi1', icon: <Linkedin className="w-6 h-6" />, label: 'LinkedIn' },
+    { href: 'https://instagram.com/deepakmodi.io', icon: <Instagram className="w-6 h-6" />, label: 'Instagram' },
+    { href: 'https://twitter.com/deepakmodi_io', icon: <Twitter className="w-6 h-6" />, label: 'Twitter' },
     { href: 'https://wa.me/918676842176', icon: <FaWhatsapp className="w-6 h-6" />, label: 'WhatsApp' },
   ];
 

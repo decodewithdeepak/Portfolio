@@ -29,6 +29,13 @@
   }
 }
 
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 @layer utilities {
   .bg-grid-pattern {
     background-image: linear-gradient(to right, #6366f1 1px, transparent 1px),
@@ -120,9 +127,4 @@
   .rotateX-90 {
     transform: rotateX(90deg);
   }
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
 }

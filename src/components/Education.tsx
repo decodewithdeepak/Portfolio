@@ -5,20 +5,20 @@ import { EducationCard } from './ui/EducationCard';
 const education = [
   {
     degree: 'B.Tech in Computer Science Engineering',
-    institution: 'St. Andrews Institute of Technology and Management',
-    period: '2020 - 2024',
+    institution: 'St. Andrews Institute of Technology and Management, Gurgaon',
+    period: '2022 - 2026',
     score: '80%',
   },
   {
     degree: 'Senior Secondary (XII)',
-    institution: 'Delhi Public School',
-    period: '2019 - 2020',
+    institution: 'Inter Science College, Hazaribagh',
+    period: '2019 - 2021',
     score: '88%',
   },
   {
     degree: 'Secondary (X)',
-    institution: 'Delhi Public School',
-    period: '2017 - 2018',
+    institution: 'St. Paul\'s School, Hazaribagh',
+    period: '2017 - 2019',
     score: '85.6%',
   },
 ];

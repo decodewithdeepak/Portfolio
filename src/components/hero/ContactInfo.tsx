@@ -12,9 +12,7 @@ function ContactItem({ icon, text, href }: ContactItemProps) {
   return (
     <Component
       href={href}
-      className={`flex items-center gap-2 px-4 py-1 rounded-lg bg-white/5 dark:bg-gray-800/5 backdrop-blur-3xl border border-gray-200/10 dark:border-gray-700/10 ${
-        href ? 'hover:scale-105 hover:bg-white/10 dark:hover:bg-gray-800/10' : ''
-      } transition-all duration-300`}
+      className={`flex items-center gap-2 px-4 py-1 ${href ? 'hover:scale-105' : ''} transition-transform duration-200`}
     >
       <span className="text-blue-600 dark:text-blue-400">{icon}</span>
       <span className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
@@ -34,8 +32,8 @@ export function ContactInfo() {
       />
       <ContactItem
         icon={<Mail className="w-5 h-5" />}
-        text="contact@deepakmodi.dev"
-        href="mailto:contact@deepakmodi.dev"
+        text="deepakmodi8676@gmail.com"
+        href="mailto:deepakmodi8676@gmail.com"
       />
       <ContactItem
         icon={<MapPin className="w-5 h-5" />}

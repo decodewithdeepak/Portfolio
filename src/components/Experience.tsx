@@ -1,7 +1,6 @@
 import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { Timeline } from './ui/Timeline';
-import { ScrollReveal } from './ui/ScrollReveal';
 
 const experiences = [
   {
@@ -22,12 +21,8 @@ export function Experience() {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-8">
-        <ScrollReveal>
-          <SectionTitle>Experience</SectionTitle>
-        </ScrollReveal>
-        <ScrollReveal animation="fade-up" delay={100}>
-          <Timeline items={experiences} />
-        </ScrollReveal>
+        <SectionTitle>Experience</SectionTitle>
+        <Timeline items={experiences} />
       </div>
     </section>
   );

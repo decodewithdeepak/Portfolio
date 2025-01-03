@@ -14,14 +14,13 @@ function ActionButton({ href, icon, text, primary = false }: ActionButtonProps) 
   return (
     <Component
       href={href}
-      className={`group relative overflow-hidden px-4 py-2 sm:px-6 sm:py-3 rounded-md flex items-center gap-1 sm:gap-2 font-medium text-sm sm:text-base transition-all duration-300 transform hover:scale-105 ${primary
-          ? 'bg-blue-600 text-white hover:bg-blue-700'
-          : 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700'
+      className={`flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-md text-sm sm:text-base transition-all duration-200 ${primary
+        ? 'bg-blue-600 text-white hover:bg-blue-700'
+        : 'text-blue-600 dark:text-blue-400 border-2 border-blue-600'
         }`}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <span className="relative">{icon}</span>
-      <span className="relative">{text}</span>
+      <span>{icon}</span>
+      <span>{text}</span>
     </Component>
   );
 }

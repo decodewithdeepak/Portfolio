@@ -1,22 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export function useTheme() {
-  // Get initial theme from localStorage or system preference
-  const getInitialTheme = () => {
+  const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      return savedTheme;
+      return savedTheme === 'dark';
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
-  const [isDark, setIsDark] = useState(getInitialTheme() === 'dark');
+  const updateTheme = useCallback((dark: boolean) => {
+    // Simply add or remove the dark class
+    document.documentElement.classList[dark ? 'add' : 'remove']('dark');
+  }, []);
 
   useEffect(() => {
-    // Apply theme on mount and theme change
-    document.documentElement.classList.toggle('dark', isDark);
+    // Apply theme immediately
+    updateTheme(isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }, [isDark]);
+  }, [isDark, updateTheme]);
 
   return { isDark, setIsDark };
 }

@@ -68,8 +68,9 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
             <a
-              href="/resume.pdf"
+              href="/assets/Deepak_Modi_Resume.pdf"
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              download
             >
               <FileText className="w-4 h-4" />
               Resume
@@ -110,8 +111,9 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="/assets/Deepak_Modi_Resume.pdf"
               className="flex items-center gap-2 mx-3 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              download
             >
               <FileText className="w-4 h-4" />
               Resume

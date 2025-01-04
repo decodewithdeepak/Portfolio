@@ -34,7 +34,7 @@ export function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500"
         />
       </div>
       
@@ -49,7 +49,7 @@ export function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-5000"
         />
       </div>
       
@@ -64,13 +64,13 @@ export function ContactForm() {
           onChange={handleChange}
           required
           rows={4}
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 outline-none transition-shadow resize-none"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500"
         />
       </div>
       
       <button
         type="submit"
-        className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center gap-2 transition-colors"
+        className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center gap-2"
       >
         <span>Send Message</span>
         <Send className="w-5 h-5" />

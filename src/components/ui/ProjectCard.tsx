@@ -13,10 +13,10 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
   return (
     <div className="relative group">
       {/* Gradient Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 rounded-xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 rounded-xl blur-xl opacity-30 group-hover:opacity-60 pointer-events-none" />
 
       {/* Card Content */}
-      <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+      <div className="relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-transform duration-300">
         {/* Image Section */}
         <div className="relative overflow-hidden">
           <img
@@ -30,18 +30,18 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/20 rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300 ease-in-out shadow-lg"
+              className="p-3 bg-white/20 rounded-full hover:bg-blue-600 hover:scale-110 transition-transform duration-300 ease-in-out shadow-lg"
             >
-              <ExternalLink className="w-6 h-6 text-white hover:text-white transition-colors" />
+              <ExternalLink className="w-6 h-6 text-white" />
             </a>
             {/* GitHub Link */}
             <a
               href={`https://github.com/deepakmodi/${title.toLowerCase()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/20 rounded-full hover:bg-gray-900 hover:scale-110 transition-all duration-300 ease-in-out shadow-lg"
+              className="p-3 bg-white/20 rounded-full hover:bg-gray-900 hover:scale-110 transition-transform duration-300 ease-in-out shadow-lg"
             >
-              <Github className="w-6 h-6 text-white hover:text-white transition-colors" />
+              <Github className="w-6 h-6 text-white" />
             </a>
           </div>
         </div>
@@ -54,7 +54,7 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-4 py-1 text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full shadow-sm transition-transform duration-300 hover:scale-105"
+                className="px-4 py-1 text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full shadow-sm transform hover:scale-105 transition-transform duration-300"
               >
                 {tag}
               </span>

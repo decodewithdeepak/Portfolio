@@ -14,10 +14,11 @@ function ActionButton({ href, icon, text, primary = false }: ActionButtonProps) 
   return (
     <Component
       href={href}
-      className={`flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-md text-sm sm:text-base transition-all duration-200 ${primary
-        ? 'bg-blue-600 text-white hover:bg-blue-700'
-        : 'text-blue-600 dark:text-blue-400 border-2 border-blue-600'
-        }`}
+      className={`flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-md text-sm sm:text-base ${
+        primary
+          ? 'bg-blue-600 text-white hover:bg-blue-700'
+          : 'text-blue-600 dark:text-blue-400 border-2 border-blue-600'
+      } transition-transform duration-300 transform hover:scale-105`}
     >
       <span>{icon}</span>
       <span>{text}</span>

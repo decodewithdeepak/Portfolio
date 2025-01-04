@@ -11,12 +11,14 @@ interface SkillCardProps {
 
 export function SkillCard({ name, icon: Icon, category, description }: SkillCardProps) {
   return (
-    <div className="group relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+    <div className="group relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-1">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
       <div className="relative z-10">
         <div className="flex items-center gap-4 mb-4">
-          <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:scale-110 transition-transform duration-300">
+          {/* Icon Container */}
+          <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:scale-105 transition-transform duration-300">
             <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>
           <div>

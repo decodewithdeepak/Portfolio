@@ -35,8 +35,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-        }`}
+      className={`fixed w-full z-50 transition-all duration-150 ease-in-out ${
+        isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -53,8 +54,9 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-105 hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400 ${activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''
-                  }`}
+                className={`text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 transform hover:scale-105 hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400 ${
+                  activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''
+                }`}
                 onClick={() => setActiveLink(link.href)}
               >
                 {link.label}
@@ -80,7 +82,7 @@ export function Navbar() {
             <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -97,8 +99,9 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium text-center text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-md hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400 ${activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''
-                  }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium text-center text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 hover:shadow-md hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400 ${
+                  activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''
+                }`}
                 onClick={() => {
                   setActiveLink(link.href);
                   setIsOpen(false);
@@ -118,7 +121,6 @@ export function Navbar() {
           </div>
         </div>
       )}
-
     </nav>
   );
 }

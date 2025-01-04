@@ -9,7 +9,7 @@ interface StatItemProps {
 
 function StatItem({ icon, value, label }: StatItemProps) {
   return (
-    <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700">
+    <div className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
       <div className="text-blue-600 dark:text-blue-400 mb-2">{icon}</div>
       <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         {value}

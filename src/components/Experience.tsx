@@ -5,15 +5,15 @@ import { Timeline } from './ui/Timeline';
 const experiences = [
   {
     title: 'Full Stack Developer Intern',
-    company: 'TechCorp Solutions',
-    period: 'Jun 2023 - Present',
+    company: 'Cyberxield Solutions',
+    period: 'Jan 2024 - Feb 2024',
     description: 'Developing and maintaining web applications using MERN stack. Implemented key features that improved user engagement by 40%.',
   },
   {
     title: 'Web Development Lead',
     company: 'College Tech Club',
-    period: 'Aug 2022 - May 2023',
-    description: 'Led a team of 5 developers in creating the college event management platform. Mentored junior developers in web technologies.',
+    period: 'Aug 2024 - Present',
+    description: 'Led a team of 4 developers in creating the college event management platform. Mentored junior developers in web technologies.',
   },
 ];
 

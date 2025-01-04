@@ -32,7 +32,7 @@ export function Contact() {
                 className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Github className="w-6 h-6" />
-                <span>github.com/deepakmodi</span>
+                <span>github.com/decodewithdeepak</span>
               </a>
               <a
                 href="https://linkedin.com/in/deepakmodi"
@@ -41,7 +41,7 @@ export function Contact() {
                 className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Linkedin className="w-6 h-6" />
-                <span>linkedin.com/in/deepakmodi</span>
+                <span>linkedin.com/in/deepakmodi1</span>
               </a>
             </div>
           </div>

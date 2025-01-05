@@ -9,23 +9,29 @@ import { Certifications } from './components/Certifications';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { Analytics } from "@vercel/analytics/react"
+import { LoadingScreen } from './components/loading/LoadingScreen';
+import { useLoading } from './hooks/useLoading';
 
 function App() {
+  const isLoading = useLoading();
+
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-      <Analytics />
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Certifications />
-      <Education />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <LoadingScreen isLoading={isLoading} />
+      <div className={`min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Certifications />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
+
 export default App;

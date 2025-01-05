@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface TypeWriterProps {
   words: string[];
@@ -7,26 +7,32 @@ interface TypeWriterProps {
   gradient?: boolean;
 }
 
-export function TypeWriter({ words, delay = 100, infinite = true, gradient = true }: TypeWriterProps) {
+export function TypeWriter({
+  words,
+  delay = 100,
+  infinite = true,
+  gradient = true,
+}: TypeWriterProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState('|'); // Start with the cursor
+  const [currentText, setCurrentText] = useState("|"); // Start with the cursor
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const word = words[currentWordIndex];
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing
-        if (currentText.length < word.length + 1) {  // Add +1 to include the cursor
-          setCurrentText(word.slice(0, currentText.length) + '|');  // Keep the cursor at the end
+        // Typing Effect
+        if (currentText.length < word.length + 1) {
+          setCurrentText(word.slice(0, currentText.length) + "|"); // Keep the cursor at the end
         } else {
-          // Pause before deleting
-          setTimeout(() => setIsDeleting(true), 1500);
+          // Pause before deleting (slightly shorter pause for fluidity)
+          setTimeout(() => setIsDeleting(true), 1000);
         }
       } else {
-        // Deleting
-        if (currentText.length > 1) {  // Don't delete the cursor
-          setCurrentText(word.slice(0, currentText.length - 2) + '|');  // Keep the cursor at the end while deleting
+        // Deleting Effect
+        if (currentText.length > 1) {
+          setCurrentText(word.slice(0, currentText.length - 2) + "|"); // Keep the cursor at the end
         } else {
           setIsDeleting(false);
           setCurrentWordIndex((prev) =>
@@ -34,13 +40,19 @@ export function TypeWriter({ words, delay = 100, infinite = true, gradient = tru
           );
         }
       }
-    }, isDeleting ? delay / 2 : delay);
+    }, isDeleting ? delay / 1.5 : delay); // Faster deleting for smoother transition
 
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentWordIndex, words, delay, infinite]);
 
   return (
-    <span className={`relative font-semibold ${gradient ? 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent' : 'text-blue-600 dark:text-blue-400'}`}>
+    <span
+      className={`relative font-semibold ${
+        gradient
+          ? "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          : "text-blue-600 dark:text-blue-400"
+      }`}
+    >
       <span className="whitespace-nowrap">{currentText}</span>
     </span>
   );

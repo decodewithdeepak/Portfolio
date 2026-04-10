@@ -1,5 +1,6 @@
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
+import { SOCIAL_LINKS } from "../constants";
 
 const badges = [
   {
@@ -7,14 +8,14 @@ const badges = [
     platform: "LeetCode",
     title: "50 Days Badge 2024",
     image: "https://assets.leetcode.com/static_assets/marketing/2024-50.gif",
-    profile: "https://leetcode.com/deepakmodi/",
+    profile: SOCIAL_LINKS.leetcode,
   },
   {
     id: "leetcode-100",
     platform: "LeetCode",
     title: "100 Days Badge 2024",
     image: "https://assets.leetcode.com/static_assets/marketing/2024-100-new.gif",
-    profile: "https://leetcode.com/deepakmodi/",
+    profile: SOCIAL_LINKS.leetcode,
   },
 
   {
@@ -22,14 +23,14 @@ const badges = [
     platform: "GitHub",
     title: "Pull Shark",
     image: "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
-    profile: "https://github.com/decodewithdeepak",
+    profile: SOCIAL_LINKS.github,
   },
   {
     id: "github-arctic",
     platform: "GitHub",
     title: "Arctic Code Vault Contributor",
     image: "https://github.githubassets.com/images/modules/profile/badge--acv-64.png",
-    profile: "https://github.com/decodewithdeepak",
+    profile: SOCIAL_LINKS.github,
   },
 
   {

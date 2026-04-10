@@ -1,6 +1,7 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { SiLeetcode } from "react-icons/si";
+import { USER_NAMES, SOCIAL_LINKS } from '../constants';
 
 export function Leetcode() {
   return (
@@ -13,7 +14,7 @@ export function Leetcode() {
             {/* Leetcode Activity Image */}
             <div className="relative w-full h-[18rem] md:h-[25rem] overflow-hidden">
               <img
-                src="https://leetcard.jacoblin.cool/deepakmodi1?theme=dark&font=Inter&ext=activity&border=2&radius=10"
+                src={`https://leetcard.jacoblin.cool/${USER_NAMES.leetcodeUsername}?theme=dark&font=Inter&ext=activity&border=2&radius=10`}
                 title="Leetcode Activity"
                 className="absolute w-full h-full rounded-xl shadow-md"
               >
@@ -35,7 +36,7 @@ export function Leetcode() {
               {/* LeetCode Profile Button */}
               <div className="mt-6 flex justify-center">
                 <a
-                  href="https://leetcode.com/deepakmodi1/"
+                  href={SOCIAL_LINKS.leetcode}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all"

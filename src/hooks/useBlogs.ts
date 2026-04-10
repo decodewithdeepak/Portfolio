@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { USER_NAMES } from "../constants";
 
 const HASHNODE_API = "https://gql.hashnode.com/";
-const USERNAME = "deepakmodi"; // Hashnode username
+const USERNAME = USER_NAMES.hashnodeUsername;
 
 interface Blog {
   title: string;

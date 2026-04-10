@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from '../../constants';
+
 interface BlogCardProps {
   title: string;
   brief: string;
@@ -9,7 +11,7 @@ interface BlogCardProps {
 export function BlogCard({ title, brief, coverImage, slug, publishedAt }: BlogCardProps) {
   return (
     <a
-      href={`https://deepakmodi.hashnode.dev/${slug}`}
+      href={`${SOCIAL_LINKS.blog}/${slug}`}
       target="_blank"
       rel="noopener noreferrer"
       className="group block overflow-hidden rounded-lg shadow border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 hover:shadow-md transition"

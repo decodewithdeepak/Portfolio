@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SiGithub } from 'react-icons/si';
+import { SOCIAL_LINKS } from '../../constants';
 
 export function GithubStarsButton() {
     const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,7 @@ export function GithubStarsButton() {
     return (
         <div className="fixed bottom-6 left-6 z-50 group">
             <a
-                href="https://github.com/decodewithdeepak/Portfolio"
+                href={`${SOCIAL_LINKS.github}/Portfolio`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 p-2 bg-gray-900 text-white rounded-full shadow-md transition relative"

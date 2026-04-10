@@ -3,6 +3,7 @@ import GitHubCalendar from "react-github-calendar";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { Github } from "lucide-react";
+import { USER_NAMES } from "../constants";
 
 interface Repo {
   name: string;
@@ -28,11 +29,11 @@ export function GitHub() {
   const [user, setUser] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/decodewithdeepak")
+    fetch(`https://api.github.com/users/${USER_NAMES.githubUsername}`)
       .then((response) => response.json())
       .then((data: UserProfile) => setUser(data));
 
-    fetch("https://api.github.com/users/decodewithdeepak/repos?sort=pushed&direction=desc&per_page=3")
+    fetch(`https://api.github.com/users/${USER_NAMES.githubUsername}/repos?sort=pushed&direction=desc&per_page=3`)
       .then((response) => response.json())
       .then((data) =>
         setRepos(
@@ -57,7 +58,7 @@ export function GitHub() {
             {/* Card-like container for the GitHub calendar */}
             <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
               <GitHubCalendar
-                username="decodewithdeepak"
+                username={USER_NAMES.githubUsername}
                 blockSize={14.6}
                 blockMargin={5}
                 colorScheme="light"

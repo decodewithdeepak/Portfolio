@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { SOCIAL_LINKS } from '../../constants';
 
 interface ContactItemProps {
   icon: React.ReactNode;
@@ -32,8 +33,8 @@ export function ContactInfo() {
       />
       <ContactItem
         icon={<Mail className="w-5 h-5" />}
-        text="deepakmodidev@gmail.com"
-        href="mailto:deepakmodidev@gmail.com"
+        text="deepakmodi8676@gmail.com"
+        href={SOCIAL_LINKS.email}
       />
       <ContactItem
         icon={<MapPin className="w-5 h-5" />}

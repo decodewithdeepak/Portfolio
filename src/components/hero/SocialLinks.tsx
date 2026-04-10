@@ -1,20 +1,21 @@
 import { Github, Linkedin, Instagram } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { SOCIAL_LINKS } from '../../constants';
 
 const links = [
   {
-    href: 'https://github.com/decodewithdeepak',
+    href: SOCIAL_LINKS.github,
     icon: <Github className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'GitHub',
   },
   {
-    href: 'https://linkedin.com/in/deepakmodi1',
+    href: SOCIAL_LINKS.linkedin,
     icon: <Linkedin className="w-6 h-6 text-[#0077B5]" />,
     label: 'LinkedIn',
   },
   {
-    href: 'https://instagram.com/deepakmodi.io',
+    href: SOCIAL_LINKS.instagram,
     icon: <Instagram className="w-6 h-6 text-[#E1306C]" />,
     label: 'Instagram',
   },
@@ -24,7 +25,7 @@ const links = [
     label: 'WhatsApp',
   },
   {
-    href: 'https://x.com/deepakmodi_io',
+    href: SOCIAL_LINKS.twitter,
     icon: <FaXTwitter className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'Twitter',
   },
